@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-    <!--注册DispatcherServlet-->
+    <!--注册DispatcherServlet，这个是SpringMVC的核心，前端控制器-->
     <servlet>
         <servlet-name>springmvc</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -16,12 +16,13 @@
         </init-param>
 
         <!--启动级别1-->
+        <!--和服务器一起启动-->
         <load-on-startup>1</load-on-startup>
     </servlet>
 
-
-    <!-- / 匹配所有的请求：（不包括.jsp）-->
-    <!-- /* 匹配所有的请求：（包括.jsp）-->
+    <!-- 在SpringMVC中，/和/*是有区别的-->
+    <!-- / 匹配所有的请求：（不包括jsp页面）-->
+    <!-- /* 匹配所有的请求：（包括页面）-->
     <servlet-mapping>
         <servlet-name>springmvc</servlet-name>
         <url-pattern>/</url-pattern>

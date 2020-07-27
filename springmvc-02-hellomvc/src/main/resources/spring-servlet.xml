@@ -4,10 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--处理器映射器-->
     <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+    <!--处理器适配器-->
     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
 
     <!--视图解析器：DispatcherServlet给他的ModelAndView-->
+    <!--1 获取了modelandview中的数据-->
+    <!--2 解析modelandview中的视图名字-->
+    <!--3 拼接视图名字，找到对应的视图-->
+    <!--4 将找到的数据渲染过去-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
         <!--前缀-->
         <property name="prefix" value="/WEB-INF/jsp/"/>

@@ -12,6 +12,7 @@ public class HelloController implements Controller {
         // ModelAndView模型和视图
         ModelAndView mv = new ModelAndView();
         // 调用业务层
+
         // 封装对象，放在ModelAndView中
         mv.addObject("msg","HelloSpringMVC");
         /*封装要跳转的视图，放在ModelAndView中*/
